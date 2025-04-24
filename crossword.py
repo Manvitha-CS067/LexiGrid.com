@@ -39,6 +39,7 @@ print(grid)
 
 #prism
 answers = [word for word in answers if word != first_word]
+print(answers)
 for index,letter in enumerate(answers[0]):
    
     for i in first_word:
@@ -47,8 +48,9 @@ for index,letter in enumerate(answers[0]):
            
            for i in range(1,len(answers[0])):
              grid[i][1]=(answers[0])[i]
-            
+       
     break
+first_word=answers[0]    
      
 
 
@@ -58,6 +60,7 @@ for index,letter in enumerate(answers[0]):
 
 answers = [word for word in answers if word != first_word]
 first_word=answers[0]
+print(answers)
 
 for index,letter in enumerate(answers[0]):
     
