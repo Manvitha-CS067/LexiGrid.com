@@ -18,6 +18,7 @@ def pos(letter):
         for j in range(len(temp_grid[i])):
             if letter == temp_grid[i][j] :
                 return i, j
+            
     return None, None
 
 def clear_grid():
@@ -47,7 +48,7 @@ def place_word(word, start_row, start_col, direction):
                         temp_grid[start_row + i][start_col] = word[i]
                     fitted_words.append(word)
                  else:
-                      unfitted_words.append(word)
+                    unfitted_words.append(word)
                  
             
 
@@ -72,13 +73,23 @@ for idx, word in enumerate(answers[:19]):
     for letter in word:
         r, c = pos(letter)
         print(f"row -{r} column -{c} letter -{letter}")
-        if r is not None:
+        if r is not None or c is not None:
             clear_grid()
             if direction_pattern[idx] == "down":
                 place_word(word, r, c, "down")
             else:
                 place_word(word, r, c, "across")
             break
+    continue
+            
+        
+
+            
+                  
+        
+            
+            
+            
         
 
            

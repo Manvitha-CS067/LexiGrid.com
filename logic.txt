@@ -1,0 +1,99 @@
+if not placed_words:  # First word
+        for row in range(GRID_SIZE):
+            for col in range(GRID_SIZE):
+                for direction in ["across", "down"]:
+                    if can_place(word, row, col, direction, require_intersection=False):
+                        return row, col, direction
+        return None
+
+let us take row-0 col-0 direction-across canplace(optics,0,0,across,false)
+r=0
+c=0
+existing[0][0]="" hence can_place is true;
+
+find_best_location=(0,0,across)
+[0,0] to [0,10] -ultraviolet placed.
+placed=[ultraviolet]
+
+2)WAVELENGTH
+ode: for existing_word, erow, ecol, edir, _, _ in placed_words_shuffled:
+Action: Pick the first (and only, for this example) tuple from placed_words_shuffled.
+Values:
+existing_word = "ULTRAVIOLET"
+erow = 5
+ecol = 3
+edir = "across"
+_, _ (ignored): clue_number, clue
+Progress: Move to the next loop, focusing on "ULTRAVIOLET".
+
+
+Step 2: Second Loop – Iterate Over Letters in existing_word
+Code: for i, char in enumerate(existing_word):
+Action: Loop through each letter in "ULTRAVIOLET", getting its index i and character char.
+Letters:
+i=0, char="U"
+i=1, char="L"
+i=2, char="T"
+i=3, char="R"
+i=4, char="A"
+i=5, char="V"
+i=6, char="I"
+i=7, char="O"
+i=8, char="L"
+i=9, char="E"
+i=10, char="T"
+Progress: For each char, proceed to the next loop.
+
+
+Check for Matching Letters
+Code: if letter == char:
+Action: If the current letter in "WAVELENGTH" matches the current letter in "ULTRAVIOLET", proceed to compute a potential intersection.
+Common Letters:
+"ULTRAVIOLET": U, L, T, R, A, V, I, O, L, E, T
+"WAVELENGTH": W, A, V, E, L, E, N, G, T, H
+Matches: A, V, E, L, T (noting duplicates: L appears twice in "ULTRAVIOLET", E appears twice in "WAVELENGTH", T appears twice in "ULTRAVIOLET", once in "WAVELENGTH").
+Progress: For each match, compute the intersection position and try placing the word.
+
+
+if start_row >= 0 and start_col >= 0:
+                                if can_place(word, start_row, start_col, new_dir):
+                                    return start_row, start_col, new_dir
+it came negative start_row and start_col
+
+word-temparature matched with  U letter in both failed at  if start_row >= 0 and start_col >= 0:  then matched with t placed at [0,2,down] 
+next word is equilibrium  
+
+first -line 121 then U is matched with ultraviot and equilibrium .but startrow is -2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
