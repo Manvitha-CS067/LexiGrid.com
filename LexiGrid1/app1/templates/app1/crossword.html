@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crossword Grid</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            max-width: 1200px;
+            width: 100%;
+            justify-content: space-between;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(20, 30px);
+            grid-template-rows: repeat(20, 30px);
+            gap: 1px;
+            padding: 10px;
+            background-color: #fff;
+        }
+        .cell-container {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            border: 1px solid #333;
+            box-sizing: border-box;
+        }
+        .cell {
+            width: 100%;
+            height: 100%;
+            background: white;
+            text-align: center;
+            font-size: 18px;
+            text-transform: uppercase;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: none;
+        }
+        .cell:disabled {
+            background: black;
+        }
+        .cell:focus {
+            outline: 2px solid dodgerblue;
+            z-index: 1;
+        }
+        input.cell {
+            text-align: center;
+            font-size: 18px;
+            background: transparent;
+            text-transform: uppercase;
+        }
+        .clue-number {
+            position: absolute;
+            top: 1px;
+            left: 1px;
+            font-size: 10px;
+            color: #d84949;
+            z-index: 2;
+            font-style: bold;
+        }
+        .clues {
+            margin-left: 20px;
+            max-width: 400px;
+        }
+        .clues h2 {
+            margin-top: 0;
+        }
+        .clues ul {
+            list-style: none;
+            padding: 0;
+        }
+        .clues li {
+            margin-bottom: 5px;
+        }
+        .clues li.active {
+            background: #e0f7fa;
+        }
+        .controls {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background: dodgerblue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: #1e90ff;
+        }
+        a {
+            color: dodgerblue;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Crossword Puzzle</h1>
+    <div class="container">
+        <div class="grid" id="grid"></div>
+        <div class="clues">
+            <div>
+                <h2>Across</h2>
+                <ul>
+                    {% for clue in across_clues %}
+                        <li id="clue-across-{{ clue.num }}"><strong>{{ clue.num }}.</strong> {{ clue.clue }} ({{ clue.answer|length }})</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div>
+                <h2>Down</h2>
+                <ul>
+                    {% for clue in down_clues %}
+                        <li id="clue-down-{{ clue.num }}"><strong>{{ clue.num }}.</strong> {{ clue.clue }} ({{ clue.answer|length }})</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="controls">
+        <button onclick="submitAnswers()">Submit</button>
+        
+    </div>
+
+    <!-- Serialize data as JSON -->
+    {{ grid|json_script:"correct-grid" }}
+    {{ user_grid|json_script:"user-grid" }}
+    {{ across_clues|json_script:"across-clues" }}
+    {{ down_clues|json_script:"down-clues" }}
+
+    <script>
+        const grid = document.getElementById('grid');
+        const rows = 20;
+        const cols = 20;
+        const cells = [];
+
+        // Parse JSON data from script tags
+        const correctGrid = JSON.parse(document.getElementById('correct-grid').textContent);
+        const userGrid = JSON.parse(document.getElementById('user-grid').textContent);
+        const acrossClues = JSON.parse(document.getElementById('across-clues').textContent);
+        const downClues = JSON.parse(document.getElementById('down-clues').textContent);
+
+        // Create grid cells
+        for (let r = 0; r < rows; r++) {
+            cells[r] = [];
+            for (let c = 0; c < cols; c++) {
+                const cellData = correctGrid[r][c];
+                const cellContainer = document.createElement('div');
+                cellContainer.className = 'cell-container';
+
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.maxLength = 1;
+                input.className = 'cell';
+                input.dataset.row = r;
+                input.dataset.col = c;
+                input.setAttribute('aria-label', `Crossword cell at row ${r + 1}, column ${c + 1}`);
+
+                if (cellData === " ") {
+                    input.disabled = true;
+                    input.style.background = 'black';
+                } else {
+                    input.value = userGrid[r][c] !== " " ? userGrid[r][c] : "";
+                    // Check for clue numbers (Across or Down)
+                    let clueNum = null;
+                    let ariaDesc = [];
+                    acrossClues.forEach(clue => {
+                        if (clue.row === r && clue.col === c) {
+                            clueNum = clue.num;
+                            ariaDesc.push(`clue-across-${clue.num}`);
+                        }
+                    });
+                    downClues.forEach(clue => {
+                        if (clue.row === r && clue.col === c) {
+                            if (!clueNum) clueNum = clue.num;
+                            ariaDesc.push(`clue-down-${clue.num}`);
+                        }
+                    });
+                    if (clueNum) {
+                        const clueSpan = document.createElement('span');
+                        clueSpan.className = 'clue-number';
+                        clueSpan.textContent = clueNum;
+                        
+                      
+                        cellContainer.appendChild(clueSpan);
+                        input.setAttribute('aria-describedby', ariaDesc.join(' '));
+                    }
+                }
+
+                cellContainer.appendChild(input);
+                grid.appendChild(cellContainer);
+                cells[r][c] = input;
+            }
+        }
+
+        // Input validation
+        grid.addEventListener('input', (e) => {
+            const input = e.target;
+            const value = input.value.toUpperCase();
+            if (!/^[A-Z]$/.test(value)) {
+                input.value = '';
+            }
+            const r = parseInt(input.dataset.row);
+            const c = parseInt(input.dataset.col);
+            userGrid[r][c] = value;
+        });
+
+        // Arrow key navigation and clue highlighting
+        grid.addEventListener('keydown', (e) => {
+            const current = document.activeElement;
+            const row = parseInt(current.dataset.row);
+            const col = parseInt(current.dataset.col);
+            let newRow = row;
+            let newCol = col;
+
+            // Clear previous clue highlights
+            document.querySelectorAll('.clues li.active').forEach(li => li.classList.remove('active'));
+
+            // Find associated clues
+            acrossClues.forEach(clue => {
+                if (row === clue.row && col >= clue.col && col < clue.col + clue.answer.length) {
+                    document.getElementById(`clue-across-${clue.num}`)?.classList.add('active');
+                }
+            });
+            downClues.forEach(clue => {
+                if (col === clue.col && row >= clue.row && row < clue.row + clue.answer.length) {
+                    document.getElementById(`clue-down-${clue.num}`)?.classList.add('active');
+                }
+            });
+
+            switch (e.key) {
+                case 'ArrowUp':
+                    e.preventDefault();
+                    newRow = row > 0 ? row - 1 : row;
+                    break;
+                case 'ArrowDown':
+                    e.preventDefault();
+                    newRow = row < rows - 1 ? row + 1 : row;
+                    break;
+                case 'ArrowLeft':
+                    e.preventDefault();
+                    newCol = col > 0 ? col - 1 : col;
+                    break;
+                case 'ArrowRight':
+                    e.preventDefault();
+                    newCol = col < cols - 1 ? col + 1 : col;
+                    break;
+            }
+
+            // Skip disabled cells
+            while (newRow >= 0 && newRow < rows && newCol >= 0 && newCol < cols && cells[newRow][newCol].disabled) {
+                switch (e.key) {
+                    case 'ArrowUp': newRow--; break;
+                    case 'ArrowDown': newRow++; break;
+                    case 'ArrowLeft': newCol--; break;
+                    case 'ArrowRight': newCol++; break;
+                }
+            }
+
+            if (newRow >= 0 && newRow < rows && newCol >= 0 && newCol < cols) {
+                cells[newRow][newCol].focus();
+            }
+        });
+
+        // Submit answers via AJAX
+        async function submitAnswers() {
+            try {
+                const response = await fetch("{% url 'submit_answers' %}", {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRFToken': '{{ csrf_token }}',
+                    },
+                    body: JSON.stringify({ user_grid: userGrid }),
+                });
+                const result = await response.json();
+
+                if (result.all_correct) {
+                    alert('Congratulations! You solved the crossword correctly!');
+                } else {
+                    alert('Sorry, some answers are incorrect. Try again or generate a new crossword.');
+                }
+            } catch (error) {
+                alert('Error submitting answers: ' + error.message);
+            }
+        }
+    </script>
+</body>
+</html>

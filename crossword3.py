@@ -3,9 +3,9 @@ import csv
 # Initialize 8x8 grids
 def create_grid():
     grid = []
-    for i in range(16):
+    for i in range(20):
         row = []
-        for j in range(16):
+        for j in range(20):
             row.append(" ")
         grid.append(row)
     return grid
@@ -56,7 +56,7 @@ def place_word(word, start_row, start_col, direction):
 # Load answers and clues
 answers = []
 clues = []
-with open('physics2.csv', 'r') as file:
+with open('physics3.csv', 'r') as file:
     reader = csv.reader(file)
     for row in reader:
         if len(row) >= 2:  # Safely check row length
@@ -82,17 +82,7 @@ for idx, word in enumerate(answers[:19]):
             break
     continue
             
-        
-
-            
-                  
-        
-            
-            
-            
-        
-
-           
+ 
 
 # Print final grid
 for row in grid:

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crossword Grid</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #f2f2f2;
+      margin: 0;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(20, 30px); /* Update to 20 columns, 30px each */
+      grid-template-rows: repeat(20, 30px);    /* Update to 20 rows, 30px each */
+      gap: 2px;
+      padding: 10px;
+      background-color: #fff;
+    }
+    .cell {
+      width: 30px;
+      height: 30px;
+      background: white;
+      border: 1px solid #ccc;
+      text-align: center;
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+    .cell:focus {
+      outline: 2px solid dodgerblue;
+    }
+    input {
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      font-size: 18px;
+      border: none;
+      background: transparent;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+
+
+<div class="grid" id="grid"></div>
+
+<div>
+  <h2>Across</h2>
+  <ul>
+    {% for clue in across_clues %}
+      <li><strong>{{ clue.num }}</strong>. {{ clue.clue }}</li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div>
+  <h2>Down</h2>
+  <ul>
+    {% for clue in down_clues %}
+      <li><strong>{{ clue.num }}</strong>. {{ clue.clue }}</li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script>
+  const grid = document.getElementById('grid');
+  const rows = 20;
+  const cols = 20;
+  const cells = [];
+
+  // Create cells dynamically
+  for (let r = 0; r < rows; r++) {
+    cells[r] = [];
+    for (let c = 0; c < cols; c++) {
+      const input = document.createElement('input');
+      input.type = 'text';
+      input.maxLength = 1;
+      input.className = 'cell';
+      input.dataset.row = r;
+      input.dataset.col = c;
+
+      // Append the input field inside the grid
+      grid.appendChild(input);
+      cells[r][c] = input;
+    }
+  }
+
+  // Handle arrow key navigation
+  grid.addEventListener('keydown', (e) => {
+    const current = document.activeElement;
+    const row = parseInt(current.dataset.row);
+    const col = parseInt(current.dataset.col);
+
+    switch (e.key) {
+      case 'ArrowUp':
+        e.preventDefault();
+        if (row > 0) cells[row - 1][col].focus();
+        break;
+      case 'ArrowDown':
+        e.preventDefault();
+        if (row < rows - 1) cells[row + 1][col].focus();
+        break;
+      case 'ArrowLeft':
+        e.preventDefault();
+        if (col > 0) cells[row][col - 1].focus();
+        break;
+      case 'ArrowRight':
+        e.preventDefault();
+        if (col < cols - 1) cells[row][col + 1].focus();
+        break;
+    }
+  });
+
+  // Automatically focus the first cell
+  cells[0][0].focus();
+</script>
+
+</body>
+</html>
