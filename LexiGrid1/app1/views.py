@@ -1,16 +1,16 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse, JsonResponse
-
 import json
-# crossword_generator.py
 import csv
 import random
 import os
+import logging
+
+logger = logging.getLogger(__name__)
 
 GRID_SIZE = 20
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 csv_path = os.path.join(BASE_DIR, 'app1', 'physics3.csv')
-
 
 def generate_crossword():
     # Initialize grid and variables
@@ -34,10 +34,10 @@ def generate_crossword():
                     else:
                         unfitted_words.append(word)
     except FileNotFoundError:
-        print("Error: CSV not found.")
+        logger.error("CSV file not found")
         return None, None, None
     except csv.Error:
-        print("Error: Invalid CSV format.")
+        logger.error("Invalid CSV format")
         return None, None, None
 
     word_lengths = [len(word) for word in words]
@@ -94,7 +94,6 @@ def generate_crossword():
             r = row + (i if direction == "down" else 0)
             c = col + (i if direction == "across" else 0)
             grid[r][c] = word[i]
-           
 
         placed_words.append((word, row, col, direction, clue_number, clue))
         fitted_words.append(word)
@@ -133,7 +132,6 @@ def generate_crossword():
                         return row, col, direction
         return None
 
-    # Build crossword
     for idx, (word, clue) in enumerate(zip(words, clues)):
         if len(word) > GRID_SIZE:
             unfitted_words.append(word)
@@ -161,75 +159,85 @@ def generate_crossword():
             across_clues.append(entry)
         else:
             down_clues.append(entry)
-    print(across_clues)
-    for row in grid:
-        print(row)
 
-    return grid,across_clues,down_clues
+    logger.debug(f"Generated {len(across_clues)} across clues and {len(down_clues)} down clues")
+    return grid, across_clues, down_clues
+
+def validate_session(request):
+    required_keys = ['grid', 'across_clues', 'down_clues']
+    return all(key in request.session for key in required_keys)
+
 def home(request):
-    """
-    Renders the homepage with crossword clues and a link to play.
-    Generates a new crossword if not in session.
-    """
     try:
-        if 'grid' not in request.session:
-            grid, across_clues, down_clues = generate_crossword()
-            if not grid or not across_clues or not down_clues:
-                return HttpResponse("Error generating crossword. Please try again.", status=500)
-            
-            # Store in session with 1-hour expiry
-            request.session['grid'] = grid
-            request.session['across_clues'] = across_clues
-            request.session['down_clues'] = down_clues
-            request.session['user_grid'] = [[" " for _ in range(20)] for _ in range(20)]
-            request.session.set_expiry(3600)
-        else:
-            grid = request.session['grid']
-            across_clues = request.session['across_clues']
-            down_clues = request.session['down_clues']
+        logger.debug(f"Session keys before check: {list(request.session.keys())}")
+        logger.debug("Generating new crossword")
+        grid, across_clues, down_clues = generate_crossword()
+        if not grid or not across_clues or not down_clues:
+            logger.error("Failed to generate crossword")
+            return HttpResponse("Error generating crossword. Please try again.", status=500)
+        
+        # Store in session
+        request.session['grid'] = grid
+        request.session['across_clues'] = across_clues
+        request.session['down_clues'] = down_clues
+        request.session['user_grid'] = [[" " for _ in range(20)] for _ in range(20)]
+        request.session.set_expiry(3600)
+        logger.debug(f"New crossword generated with {len(across_clues)} across and {len(down_clues)} down clues")
 
         context = {
             'across_clues': across_clues,
             'down_clues': down_clues,
         }
-        return render(request, 'app1/index.html', context)
+        response = render(request, 'app1/index.html', context)
+        response['Cache-Control'] = 'no-cache, no-store, must-revalidate'
+        return response
     except Exception as e:
+        logger.error(f"Error in home view: {str(e)}")
         return HttpResponse(f"Error: {str(e)}", status=500)
 
 def crossword_view(request):
-    """
-    Renders the crossword grid and clues using session data.
-    """
     try:
-        if 'grid' not in request.session:
-            return HttpResponse("No crossword generated yet. Please visit the homepage first.", status=400)
-
+        if not validate_session(request):
+            return redirect('home')
         grid = request.session['grid']
         user_grid = request.session.get('user_grid', [[" " for _ in range(20)] for _ in range(20)])
         across_clues = request.session['across_clues']
         down_clues = request.session['down_clues']
 
+        # Preprocess grid into a list of cell objects
+        cells = []
+        for row_idx in range(GRID_SIZE):
+            for col_idx in range(GRID_SIZE):
+                clue_number = None
+                for clue in across_clues + down_clues:
+                    if clue['row'] == row_idx and clue['col'] == col_idx:
+                        clue_number = clue['num']
+                        break
+                cells.append({
+                    'row_idx': row_idx,
+                    'col_idx': col_idx,
+                    'is_letter': grid[row_idx][col_idx] != " ",
+                    'user_value': user_grid[row_idx][col_idx],
+                    'clue_number': clue_number
+                })
+
         context = {
-            'grid': grid,
-            'user_grid': user_grid,
+            'cells': cells,
             'across_clues': across_clues,
             'down_clues': down_clues,
         }
+        logger.debug(f"Cells with is_letter=true: {sum(1 for cell in cells if cell['is_letter'])}")
         return render(request, 'app1/crossword.html', context)
     except Exception as e:
+        logger.error(f"Error in crossword_view: {str(e)}")
         return HttpResponse(f"Error: {str(e)}", status=500)
 
 def submit_answers(request):
-    """
-    Submits user answers and checks if all are correct.
-    Expects POST with user_grid (20x20 array of letters or spaces).
-    Returns JSON with all_correct boolean.
-    """
     if request.method != 'POST':
         return JsonResponse({'error': 'Invalid request method'}, status=400)
 
     try:
-        if 'grid' not in request.session:
+        if not validate_session(request):
             return JsonResponse({'error': 'No crossword in session'}, status=400)
 
         user_grid = json.loads(request.body).get('user_grid')
@@ -238,29 +246,71 @@ def submit_answers(request):
         if not user_grid or len(user_grid) != 20 or any(len(row) != 20 for row in user_grid):
             return JsonResponse({'error': 'Invalid grid size'}, status=400)
 
+        # Validate cell contents
+        for row in user_grid:
+            for cell in row:
+                if cell != " " and not (isinstance(cell, str) and len(cell) == 1 and cell.isalpha()):
+                    return JsonResponse({'error': 'Invalid cell content'}, status=400)
+
         # Update user_grid in session
         request.session['user_grid'] = user_grid
         request.session.modified = True
 
-        # Check correctness
+        # Count unanswered, correct, and incorrect answers
+        unanswered_count = 0
+        correct_count = 0
+        incorrect_count = 0
         all_correct = True
         for r in range(20):
             for c in range(20):
-                if correct_grid[r][c] != " " and user_grid[r][c].upper() != correct_grid[r][c]:
-                    all_correct = False
-                    break
-            if not all_correct:
-                break
+                if correct_grid[r][c] != " ":  # Only check cells where a letter is expected
+                    if user_grid[r][c] == " ":
+                        unanswered_count += 1
+                        all_correct = False
+                    elif user_grid[r][c].upper() == correct_grid[r][c]:
+                        correct_count += 1
+                    else:
+                        incorrect_count += 1
+                        all_correct = False
 
-        return JsonResponse({
-            'all_correct': all_correct,
-        })
+        # Store results in session
+        request.session['submission_results'] = {
+            'unanswered_count': unanswered_count,
+            'correct_count': correct_count,
+            'incorrect_count': incorrect_count,
+            'all_correct': all_correct
+        }
+        request.session.modified = True
+
+        # Redirect to results page
+        return JsonResponse({'redirect': '/results/'})
+    except json.JSONDecodeError:
+        return JsonResponse({'error': 'Invalid JSON data'}, status=400)
     except Exception as e:
-        return JsonResponse({'error': str(e)}, status=500)
+        logger.error(f"Error in submit_answers: {str(e)}")
+        return JsonResponse({'error': 'Invalid input data'}, status=400)
+
+def results(request):
+    try:
+        if not validate_session(request) or 'submission_results' not in request.session:
+            logger.debug("No submission results or session data, redirecting to home")
+            return redirect('home')
+
+        results = request.session['submission_results']
+        context = {
+            'unanswered_count': results['unanswered_count'],
+            'correct_count': results['correct_count'],
+            'incorrect_count': results['incorrect_count'],
+            'all_correct': results['all_correct'],
+        }
+        return render(request, 'app1/result.html', context)
+    except Exception as e:
+        logger.error(f"Error in results view: {str(e)}")
+        return HttpResponse(f"Error: {str(e)}", status=500)
 
 def reset_crossword(request):
-    """
-    Clears the session and redirects to the homepage.
-    """
     request.session.flush()
-    return render(request, 'app1/index.html')
+    return redirect('home')
+
+def debug_session(request):
+    return JsonResponse({'session_keys': list(request.session.keys())})

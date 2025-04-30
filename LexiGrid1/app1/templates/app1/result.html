@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crossword Results</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        h1 { color: #333; }
+        p { font-size: 18px; margin: 10px 0; }
+        a { margin: 10px; padding: 5px 10px; text-decoration: none; color: #007bff; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>Crossword Submission Results</h1>
+    {% if all_correct and unanswered_count == 0 %}
+        <p>Congratulations! All answers are correct! ({{ correct_count }} correct)</p>
+    {% else %}
+        <p>Unanswered cells: {{ unanswered_count }}</p>
+        <p>Correct answers: {{ correct_count }}</<!DOCTYPE html>
+            <html>
+            <head>
+                <title>Crossword Results</title>
+                <style>
+                    body { font-family: Arial, sans-serif; margin: 20px; }
+                    h1 { color: #333; }
+                    p { font-size: 18px; margin: 10px 0; }
+                    a { margin: 10px; padding: 5px 10px; text-decoration: none; color: #007bff; }
+                    a:hover { text-decoration: underline; }
+                </style>
+            </head>
+            <body>
+                <h1>Crossword Submission Results</h1>
+                {% if all_correct and unanswered_count == 0 %}
+                    <p>Congratulations! All answers are correct! ({{ correct_count }} correct)</p>
+                {% else %}
+                    <p>Unanswered cells: {{ unanswered_count }}</p>
+                    <p>Correct answers: {{ correct_count }}</p>
+                    <p>Incorrect answers: {{ incorrect_count }}</p>
+                {% endif %}
+                <a href="{% url 'crossword' %}">Try Again</a>
+                <a href="{% url 'reset' %}">New Puzzle</a>
+            </body>
+            </html>p>
+        <p>Incorrect answers: {{ incorrect_count }}</p>
+    {% endif %}
+    <a href="{% url 'crossword' %}">Try Again</a>
+    <a href="{% url 'reset' %}">New Puzzle</a>
+</body>
+</html>

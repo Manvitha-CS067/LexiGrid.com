@@ -1,0 +1,6 @@
+lexigrid_blank_2025_04_29_18:15.txt
+lexigrid_filled_2025_04_29_18:15.txt
+clues
+
+
+directory -today

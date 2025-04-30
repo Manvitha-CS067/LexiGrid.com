@@ -3,9 +3,7 @@ from django.core.management.commands.runserver import Command as RunserverComman
 
 class Command(RunserverCommand):
     def handle(self, *args, **options):
-        Session.flush()
         # Clear all sessions before starting the server
         Session.objects.all().delete()
-        self.stdout.write(self.style.SUCCESS('✅ Cleared all session data'))
-
+        self.stdout.write(self.style.SUCCESS('Cleared all session data'))
         super().handle(*args, **options)
