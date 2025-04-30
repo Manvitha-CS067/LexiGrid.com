@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crossword Puzzle</title>
+    <style>
+        .clues {
+            display: flex;
+            align-items: flex-start;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Crossword Grid -->
+<table border="1">
+    {% for row in indexed_list %}
+        <tr>
+            {% for cell in row %}
+                <td id="cell-{{ cell.row }}-{{ cell.col }}"
+                    style="width: 30px; height: 30px; text-align: center; vertical-align: top; position: relative;
+                           background-color: {% if cell.letter %} white {% else %} black {% endif %};">
+
+                    {% if cell.letter %}
+                        <div class="letter-content" style="font-size: 14px;"></div>
+                        {% if cell.clue_num %}
+                            <div style="position: absolute; top: 0; left: 0; font-size: 10px;">
+                                {{ cell.clue_num }}
+                            </div>
+                        {% endif %}
+                    {% endif %}
+                </td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+
+<!-- Across Clues -->
+<h3>Across Clues</h3>
+<ul>
+    {% for clue in across_clues %}
+        <li>
+            {{ clue.num }}. {{ clue.clue }}-{{ clue.length }}
+            <input type="text" id="input-across-{{ clue.num }}" maxlength="{{ clue.answer|length }}">
+            <button onclick="fillAnswer('{{ clue.row }}', '{{ clue.col }}', '{{ clue.answer|length }}', 'across', 'input-across-{{ clue.num }}')">OK</button>
+        </li>
+    {% endfor %}
+</ul>
+
+<!-- Down Clues -->
+<h3>Down Clues</h3>
+<ul>
+    {% for clue in down_clues %}
+        <li>
+            {{ clue.num }}. {{ clue.clue }}
+            <input type="text" id="input-down-{{ clue.num }}" maxlength="{{ clue.answer|length }}">
+            <button onclick="fillAnswer('{{ clue.row }}', '{{ clue.col }}', '{{ clue.answer|length }}', 'down', 'input-down-{{ clue.num }}')">OK</button>
+        </li>
+    {% endfor %}
+</ul>
+
+<form method="get" action="{% url 'home' %}">
+    <button type="submit" name="reset" value="true">Reset Crossword</button>
+</form>
+
+<!-- JavaScript to fill answers -->
+<script>
+function fillAnswer(row, col, length, direction, inputId) {
+    row = parseInt(row);
+    col = parseInt(col);
+    length = parseInt(length);
+
+    const input = document.getElementById(inputId).value.toUpperCase();
+    if (input.length !== length) {
+        alert("Answer must be " + length + " letters.");
+        return;
+    }
+
+    for (let i = 0; i < length; i++) {
+        let r = direction === 'across' ? row : row + i;
+        let c = direction === 'across' ? col + i : col;
+        const cell = document.getElementById(`cell-${r}-${c}`);
+        if (cell) {
+            const letterDiv = cell.querySelector('.letter-content');
+            if (letterDiv) {
+                letterDiv.textContent = input[i];
+            }
+        }
+    }
+}
+</script>
+
+</body>
+</html>
