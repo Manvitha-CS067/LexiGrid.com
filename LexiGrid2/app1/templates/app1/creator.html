@@ -23,7 +23,7 @@
                            background-color: {% if cell.letter %} white {% else %} black {% endif %};">
 
                     {% if cell.letter %}
-                        <div class="letter-content" style="font-size: 14px;"></div>
+                        <div class="letter-content" style="font-size: 14px;">{{cell.letter}}</div>
                         {% if cell.clue_num %}
                             <div style="position: absolute; top: 0; left: 0; font-size: 10px;">
                                 {{ cell.clue_num }}
@@ -42,8 +42,8 @@
     {% for clue in across_clues %}
         <li>
             {{ clue.num }}. {{ clue.clue }}-{{ clue.length }}
-            <input type="text" id="input-across-{{ clue.num }}" maxlength="{{ clue.answer|length }}">
-            <button onclick="fillAnswer('{{ clue.row }}', '{{ clue.col }}', '{{ clue.answer|length }}', 'across', 'input-across-{{ clue.num }}')">OK</button>
+            
+            
         </li>
     {% endfor %}
 </ul>
@@ -53,19 +53,18 @@
 <ul>
     {% for clue in down_clues %}
         <li>
-            {{ clue.num }}. {{ clue.clue }}
-            <input type="text" id="input-down-{{ clue.num }}" maxlength="{{ clue.answer|length }}">
-            <button onclick="fillAnswer('{{ clue.row }}', '{{ clue.col }}', '{{ clue.answer|length }}', 'down', 'input-down-{{ clue.num }}')">OK</button>
+            {{ clue.num }}. {{ clue.clue }} -{{ clue.length }}
+            
+           
         </li>
     {% endfor %}
 </ul>
 
-<form method="get" action="{% url 'home' %}">
-    <button type="submit" name="reset" value="true">Reset Crossword</button>
-</form>
+
 
 <!-- JavaScript to fill answers -->
 <script>
+{% comment %} console.log("JavaScript loaded");
 function fillAnswer(row, col, length, direction, inputId) {
     row = parseInt(row);
     col = parseInt(col);
@@ -81,6 +80,7 @@ function fillAnswer(row, col, length, direction, inputId) {
         let r = direction === 'across' ? row : row + i;
         let c = direction === 'across' ? col + i : col;
         const cell = document.getElementById(`cell-${r}-${c}`);
+        console.log(cell)
         if (cell) {
             const letterDiv = cell.querySelector('.letter-content');
             if (letterDiv) {
@@ -88,7 +88,27 @@ function fillAnswer(row, col, length, direction, inputId) {
             }
         }
     }
+   
 }
+function clearInput(inputId, row, col, length, direction) {
+    const input = document.getElementById(inputId);
+    if (input) {
+        input.value = '';
+    }
+
+    for (let i = 0; i < length; i++) {
+        let r = direction === 'across' ? parseInt(row) : parseInt(row) + i;
+        let c = direction === 'across' ? parseInt(col) + i : parseInt(col);
+        const cell = document.getElementById(`cell-${r}-${c}`);
+        if (cell) {
+            const letterDiv = cell.querySelector('.letter-content');
+            if (letterDiv) {
+                letterDiv.textContent = '';
+            }
+        }
+    }
+} {% endcomment %}
+
 </script>
 
 </body>

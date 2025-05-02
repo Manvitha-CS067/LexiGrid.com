@@ -1,28 +1,23 @@
 from django.shortcuts import render,redirect
-import json
-# Create your views here.
-from django.shortcuts import render
-import json
 
-def home(request):
-    if 'reset' in request.GET:
-        # Clear crossword session data
-        request.session.flush()
-        return redirect('home') 
-    # Check if crossword is already stored in session
-    if 'grid' in request.session and 'across_clues' in request.session and 'down_clues' in request.session:
-        grid = json.loads(request.session['grid'])
-        across_clues = json.loads(request.session['across_clues'])
-        down_clues = json.loads(request.session['down_clues'])
-    else:
+
+def creator(request):
+    # if 'reset' in request.GET:
+    #     # Clear crossword session data
+    #     request.session.flush()
+    #     return redirect('home') 
+    # # Check if crossword is already stored in session
+    # if 'grid' in request.session and 'across_clues' in request.session and 'down_clues' in request.session:
+    #     grid = json.loads(request.session['grid'])
+    #     across_clues = json.loads(request.session['across_clues'])
+    #     down_clues = json.loads(request.session['down_clues'])
+    # else:
         # Generate new crossword
-        grid, across_clues, down_clues = generate_crossword()
-        # Store in session as JSON strings (since session data must be JSON-serializable)
-        request.session['grid'] = json.dumps(grid)
-        request.session['across_clues'] = json.dumps(across_clues)
-        request.session['down_clues'] = json.dumps(down_clues)
-        
-
+    grid, across_clues, down_clues = generate_crossword()
+    # Store in session as JSON strings (since session data must be JSON-serializable)
+    # request.session['grid'] = json.dumps(grid)
+    # request.session['across_clues'] = json.dumps(across_clues)
+    # request.session['down_clues'] = json.dumps(down_clues)
     clue_numbers = {(clue['row'], clue['col']): clue['num'] for clue in across_clues + down_clues}
 
 # Build the indexed list with optional clue numbers
@@ -44,14 +39,54 @@ def home(request):
         'across_clues': across_clues,
         'down_clues': down_clues,
     }
-    return render(request, 'app1/home.html', context)
+    return render(request, 'app1/creator.html', context)
+
+def user(request):
+    # if 'reset' in request.GET:
+    #     # Clear crossword session data
+    #     request.session.flush()
+    #     return redirect('home') 
+    # # Check if crossword is already stored in session
+    # if 'grid' in request.session and 'across_clues' in request.session and 'down_clues' in request.session:
+    #     grid = json.loads(request.session['grid'])
+    #     across_clues = json.loads(request.session['across_clues'])
+    #     down_clues = json.loads(request.session['down_clues'])
+    # else:
+        # Generate new crossword
+    grid, across_clues, down_clues = generate_crossword()
+    # Store in session as JSON strings (since session data must be JSON-serializable)
+    # request.session['grid'] = json.dumps(grid)
+    # request.session['across_clues'] = json.dumps(across_clues)
+    # request.session['down_clues'] = json.dumps(down_clues)
+    clue_numbers = {(clue['row'], clue['col']): clue['num'] for clue in across_clues + down_clues}
+
+# Build the indexed list with optional clue numbers
+    indexed_list = [
+        [
+            {
+                'row': i,
+                'col': j,
+                'letter': grid[i][j] if grid[i][j]!=" " else None,
+                'clue_num': clue_numbers.get((i, j), None)
+            }
+            for j in range(len(grid))
+        ]
+        for i in range(len(grid))
+    ]
+
+    context = {
+        'indexed_list': indexed_list,
+        'across_clues': across_clues,
+        'down_clues': down_clues,
+    }
+    return render(request, 'app1/user.html', context)
 
 import csv
 import random
 import os
-import logging
 
-logger = logging.getLogger(__name__)
+
+# logger = logging.getLogger(__name__)
 
 GRID_SIZE = 20
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -70,20 +105,20 @@ def generate_crossword():
     clues = []
     try:
         with open(csv_path, 'r') as file:
-            reader = csv.reader(file)
-            for row in reader:
-                if row and row[0].strip():
-                    word = row[0].strip().upper()
+            for line in file:
+                parts = line.strip().split(',', 1)
+                if parts and parts[0].strip():
+                    word = parts[0].strip().upper()
                     if word.isalpha():
                         words.append(word)
-                        clues.append(row[1].strip() if len(row) > 1 else "No clue provided")
+                        clues.append(parts[1].strip() if len(parts) > 1 else "No clue provided")
                     else:
                         unfitted_words.append(word)
     except FileNotFoundError:
-        logger.error("CSV file not found")
+        print("CSV file not found")
         return None, None, None
     except csv.Error:
-        logger.error("Invalid CSV format")
+        print("Invalid CSV format")
         return None, None, None
 
     word_lengths = [len(word) for word in words]
@@ -207,7 +242,7 @@ def generate_crossword():
         else:
             down_clues.append(entry)
 
-    logger.debug(f"Generated {len(across_clues)} across clues and {len(down_clues)} down clues")
+    
     return grid, across_clues, down_clues
 
 

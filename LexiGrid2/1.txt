@@ -1,0 +1,11 @@
+crossword size should automatically change.
+make a mistake-word should make it reset
+length is not shown for down clues
+instead of stand alone words,every word should be connected to some other word
+line 4 and 5 repeated(views.py)
+why json?
+why logging?
+clue number=1 what is it?
+Why csv reader?
+input numbers are being taken.
+lambda explain to cs
