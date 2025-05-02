@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-f9f1s2vmb-q3o$vs5y3a%zce^tva5h1atpu03b^miy%on-kojm
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+SITE_ID=1
 
 # Application definition
 
@@ -37,7 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'app1'
+    'app1',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google'
+       
 ]
 
 MIDDLEWARE = [
@@ -48,8 +53,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+     'allauth.account.middleware.AccountMiddleware'
 ]
-
 ROOT_URLCONF = 'LexiGrid2.urls'
 
 TEMPLATES = [
@@ -122,3 +127,13 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+SOCIALACCOUNT_LOGIN_ON_GET='True'
+LOGIN_REDIRECT_URL='/user'
+
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [ 'email'],
+        'AUTH_PARAMS': {'access_type': 'online'},
+    }
+}

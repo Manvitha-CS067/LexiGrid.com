@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 
-
+def home(request):
+    return render(request,'app1/login.html')
 def creator(request):
     # if 'reset' in request.GET:
     #     # Clear crossword session data
@@ -19,6 +20,7 @@ def creator(request):
     # request.session['across_clues'] = json.dumps(across_clues)
     # request.session['down_clues'] = json.dumps(down_clues)
     clue_numbers = {(clue['row'], clue['col']): clue['num'] for clue in across_clues + down_clues}
+    
 
 # Build the indexed list with optional clue numbers
     indexed_list = [
@@ -241,6 +243,18 @@ def generate_crossword():
             across_clues.append(entry)
         else:
             down_clues.append(entry)
+    
+    import os
+    from datetime import datetime
+    directory = r'E:\LexiGrid\LexiGrid2'
+    full_path = os.path.join(directory,'clue.txt' )
+    print(full_path)
+    os.makedirs(directory, exist_ok=True)
+
+# Write text to the file
+   
+   
+
 
     
     return grid, across_clues, down_clues
