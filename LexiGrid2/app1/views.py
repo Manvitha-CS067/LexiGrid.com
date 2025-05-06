@@ -81,6 +81,50 @@ def user(request):
         'across_clues': across_clues,
         'down_clues': down_clues,
     }
+    from datetime import datetime
+
+# Generate crossword
+    from datetime import datetime
+    import os
+
+# Get grid and clues
+    grid, across_clues, down_clues = generate_crossword()
+
+    if grid is not None and across_clues is not None and down_clues is not None:
+        # Timestamp for filename
+        timestamp = datetime.now().strftime("%Y_%m_%d_%H-%M")
+
+        # Directory and filenames
+        base_dir = r'E:\LexiGrid\LexiGrid2\Files'
+        blank_file = os.path.join(base_dir, f'lexigrid_blank_{timestamp}.txt')
+        filled_file = os.path.join(base_dir, f'lexigrid_filled_{timestamp}.txt')
+        clue_file = os.path.join(base_dir, f'clue_{timestamp}.txt')  # Already used in generate_crossword
+
+        os.makedirs(base_dir, exist_ok=True)
+
+        # Save blank grid (hide letters with '.')
+        with open(blank_file, 'a') as f:
+            for row in grid:
+                f.write(' '.join('.' if cell.isalpha() else cell for cell in row) + '\n')
+            f.write('\n')
+
+        # Save filled grid
+        with open(filled_file, 'a') as f:
+            for row in grid:
+                f.write(' '.join(cell if cell.strip() else ' ' for cell in row) + '\n')
+            f.write('\n')
+
+        # Save clues (append to clue.txt)
+        with open(clue_file, 'a') as f:
+            f.write(f"\n=== Clues for crossword {timestamp} ===\n")
+            f.write("Across:\n")
+            for clue in across_clues:
+                f.write(f"{clue['num']}. {clue['clue']} ({clue['length']})\n")
+            f.write("Down:\n")
+            for clue in down_clues:
+                f.write(f"{clue['num']}. {clue['clue']} ({clue['length']})\n")
+            f.write("\n")
+
     return render(request, 'app1/user.html', context)
 
 import csv
@@ -251,12 +295,6 @@ def generate_crossword():
     print(full_path)
     os.makedirs(directory, exist_ok=True)
 
-# Write text to the file
-   
-   
-
-
-    
     return grid, across_clues, down_clues
 
 
