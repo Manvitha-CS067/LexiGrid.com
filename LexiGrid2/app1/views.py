@@ -288,12 +288,7 @@ def generate_crossword():
         else:
             down_clues.append(entry)
     
-    import os
-    from datetime import datetime
-    directory = r'E:\LexiGrid\LexiGrid2'
-    full_path = os.path.join(directory,'clue.txt' )
-    print(full_path)
-    os.makedirs(directory, exist_ok=True)
+    
 
     return grid, across_clues, down_clues
 
