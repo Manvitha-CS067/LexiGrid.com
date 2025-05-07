@@ -1,0 +1,501 @@
+ALGORITHM,Step-by-step procedure for solving a problem or performing a computation
+BROWSER,Program used to access and view websites
+FIREWALL,Security system that blocks unauthorized network access
+ENCRYPT,To scramble data so only authorized users can read it
+DATABASE,Organized collection of structured information
+ROUTER,Device that directs data packets between networks
+MALWARE,Malicious software designed to harm or exploit systems
+PHISHING,Deceptive attempt to obtain sensitive information online
+PROCESSOR,Central chip that executes instructions in a computer
+MEMORY,Component for temporary data storage in computers
+KEYBOARD,Device with keys for typing input
+MONITOR,Screen that displays computer output
+MODEM,Device that converts digital data for transmission over phone lines
+SERVER,Computer providing resources to other computers
+CLIENT,Computer that requests services from a server
+BIT,Smallest unit of digital data
+BYTE,Group of eight bits
+CACHE,Fast memory for temporary data storage
+PLUGIN,Add-on that extends software functionality
+VIRUS,Self-replicating program that infects computers
+WIRELESS,Technology for transmitting data without cables
+UPDATE,Install a newer version of software
+UPLOAD,Send files from your device to the Internet
+DOWNLOAD,Transfer files from the Internet to your device
+PASSWORD,Secret string used for authentication
+NETWORK,Connected group of computers sharing resources
+CLOUD,Online storage and computing services
+SCRIPT,Set of commands executed by a program
+SYNTAX,Rules governing structure in programming languages
+DEBUG,Find and fix errors in code
+HTML,Standard language for creating web pages
+PIXEL,Smallest unit of a digital image
+SPAM,Unwanted or unsolicited digital messages
+STREAM,Continuous transmission of audio or video data
+TOKEN,Digital code used for authentication or security
+LAN,Network connecting computers within a limited area
+WIDGET,Small application or tool on a user interface
+FRAMEWORK,Reusable set of libraries and tools for software development
+AUTOMATION,Technology that performs tasks without human intervention
+BANDWIDTH,Maximum data transfer rate of a network
+PROTOCOL,Set of rules for data exchange between devices
+DOMAIN,Unique name identifying a website
+URL,Web address of a resource
+EMAIL,Electronic message sent over the internet
+DRIVER,Software that controls hardware devices
+PATCH,Software update that fixes bugs or vulnerabilities
+QUEUE,Ordered list of items waiting to be processed
+TERABYTE,Unit of digital information equal to about one trillion bytes
+FIRMWARE,Software programmed into hardware devices
+ARRAY,Ordered collection of elements in programming
+BACKUP,Copy of data for recovery in case of loss
+BINARY,Base-2 numeral system used by computers
+BLOG,Online journal or informational website
+BOOT,Start up a computer or device
+BUFFER,Temporary data storage area for smooth processing
+BUG,Error or flaw in software code
+BUS,Communication system that transfers data between components
+CLIPBOARD,Temporary storage for copied or cut data
+CODE,Instructions written for a computer to execute
+COMMAND,Instruction given to a computer program
+COMPILER,Program that translates source code into executable code
+COOKIE,Small file stored by a web browser to track user data
+CURSOR,Flashing symbol indicating where text will appear
+DATA,Information processed or stored by a computer
+DEBUGGER,Tool for finding and resolving code errors
+DELETE,Remove data or files from a system
+DESKTOP,Primary user interface of a computer system
+DIGITAL,Represented by discrete values
+DISK,Storage device for digital data
+DIRECTORY,Folder that contains files or other folders
+DRAG,Move an item on screen using a mouse
+FOLDER,Container for organizing files
+FONT,Set of printable or displayable text characters
+FORMAT,Arrange data or prepare a storage device
+GIGABYTE,Unit of information equal to about one billion bytes
+GRAPHICS,Visual images produced by computers
+HACK,Gain unauthorized access to a computer system
+HARDWARE,Physical components of a computer system
+HOST,Computer that provides data or services to others
+ICON,Small graphic symbol on a computer screen
+INBOX,Folder for incoming email messages
+INPUT,Data entered into a computer system
+INTERFACE,Point where two systems or users interact
+INTERNET,Global network that connects millions of computers
+IP,Unique address identifying a device on a network
+JAVA,Popular programming language known for portability
+JOYSTICK,Handheld input device for controlling games
+KERNEL,Core component of an operating system
+KEYWORD,Reserved word with special meaning in programming
+LAPTOP,Portable personal computer
+LINK,Clickable reference to another web resource
+LINUX,Open-source operating system based on Unix
+LOGIN,Enter credentials to access a system
+LOGOUT,Sign out of a system or application
+LOGIC,Reasoning conducted according to strict principles
+MACRO,Automated sequence of actions in software
+MAINFRAME,Large  powerful computer for bulk data processing
+MEDIA,Means of storing or communicating information
+MICROCHIP,Tiny integrated circuit containing electronic components
+MICROPHONE,Device for converting sound into electrical signals
+MIGRATE,Move data or systems from one environment to another
+MODULE,Self-contained unit of software
+MULTIMEDIA,Content using a combination of different media
+NODE,Connection point in a network
+OBJECT,Instance of a class in object-oriented programming
+OFFLINE,Not connected to a network
+ONLINE,Connected to a network
+OPCODE,Instruction code in machine language
+OPERATOR,Symbol that represents an operation in programming
+OPTICAL,Relating to light or vision in technology
+OUTPUT,Data produced by a computer
+PACKET,Small unit of data transmitted over a network
+PATH,Location of a file or directory in a system
+PEER,Device or user at the same level in a network
+PERIPHERAL,External device connected to a computer
+PING,Network utility to test connectivity
+PLATFORM,Underlying system or environment for software
+PORT,Physical or virtual connection point
+PRINTER,Device that produces paper copies of documents
+PROCESS,Series of actions or steps in computing
+PROXY,Server that acts as an intermediary for requests
+RAM,Random Access Memory for temporary data storage
+REBOOT,Restart a computer system
+RESOLUTION,Clarity or detail of a digital image
+RESTORE,Return data or system to a previous state
+RUNTIME,Period during which a program is running
+SAVE,Store data for future use
+SCAN,Digitize a document or image
+SCANNER,Device that converts physical documents to digital
+SEARCH,Look for information or files
+SECURITY,Measures taken to protect computer systems
+SESSION,Period of activity between login and logout
+SHARE,Make files or resources accessible to others
+SHELL,Interface for accessing operating system services
+SHIFT,Modifier key on a keyboard
+SIGNAL,Transmitted data or instructions
+SIMULATION,Imitation of a real-world process by a computer
+SNAPSHOT,Copy of a system at a particular moment
+SOCKET,Endpoint for sending or receiving data in a network
+SOURCE,Original code or data
+STACK,Data structure with last-in  first-out access
+STORAGE,Component or device for saving data
+STRING,Sequence of characters in programming
+SUBNET,Smaller division of a computer network
+SWITCH,Device that connects devices within a network
+TABLE,Grid of rows and columns for data
+TAG,Label used to categorize data
+TERMINAL,Device for entering and displaying data
+THREAD,Smallest unit of processing in a program
+TORRENT,Peer-to-peer file sharing protocol
+TRAFFIC,Amount of data moving through a network
+TROJAN,Malicious software disguised as legitimate
+UNDO,Reverse the last action in software
+UNIX,Multiuser  multitasking operating system
+USER,Person using a computer system
+UTILITY,Software designed for system maintenance
+VENDOR,Company that sells hardware or software
+VERSION,Specific form or release of software
+VIRTUAL,Simulated by computer software
+VOLUME,Storage space on a disk or drive
+WEB,World Wide Web
+WEBSITE,Collection of related web pages
+WINDOW,Rectangular area on a screen for displaying content
+WORKSTATION,High-performance computer for technical work
+WORM,Self-replicating malware that spreads across networks
+WWW,Abbreviation for the World Wide Web
+XML,Markup language for encoding documents
+ZIP,Compressed file format for data storage
+ACCESS,Permission to use or enter a system
+ADAPTER,Device that converts attributes of one device to another
+ADDRESS,Unique identifier for a device or location
+AGGREGATOR,Tool that collects content from multiple sources
+ANALOG,Signal with continuous values
+ANIMATION,Sequence of images creating motion
+ARCHIVE,Collection of files stored together for backup
+ATTACHMENT,File sent along with an email
+AUTHORITY,Level of control or access in a system
+AVATAR,Digital representation of a user
+BACKBONE,Main support structure of a network
+BALANCE,Distribution of workload in computing
+BARCODE,Machine-readable code with vertical lines
+BATCH,Group of jobs processed together
+BAND,Range of frequencies for transmission
+BITMAP,Image composed of pixels
+BLOCKCHAIN,Distributed digital ledger technology
+BLUETOOTH,Short-range wireless communication technology
+BOUNCE,Return of undelivered email
+BRIDGE,Device connecting two network segments
+BUFFERING,Temporary storage to smooth data flow
+BYTECODE,Intermediate code for virtual machines
+CAPTCHA,Test to distinguish humans from bots
+CAPTURE,Record or take data from a source
+CARRIER,Signal that transmits data
+CELL,Smallest unit in a spreadsheet
+CHANNEL,Pathway for data transmission
+CHIP,Miniature electronic circuit
+CIPHER,Algorithm for encrypting information
+CLIP,Short segment of audio or video
+CLONE,Exact copy of data or device
+CLUSTER,Group of linked computers working together
+CODEC,Device or software for encoding/decoding data
+COLLATE,Arrange data in a specific order
+COMMANDER,Software for managing files or systems
+COMPRESS,Reduce the size of a file
+CONSOLE,Terminal for entering commands
+CONTENT,Information available on websites
+CONTEXT,Surrounding information affecting meaning
+CONTROL,Mechanism for regulating a system
+CONVERTER,Device for changing formats or signals
+COPY,Duplicate data or files
+CORE,Central part of a processor or system
+CRASH,Unexpected failure of software or hardware
+CRYPTO,Prefix relating to encryption or digital currency
+DATASET,Collection of related data
+DECODER,Device or software that converts coded data
+DEFAULT,Preset option or value in software
+DEFRAG,Reorganize data on a disk for efficiency
+DELIMITER,Character that separates data fields
+DEPLOY,Release software for use
+DEVICE,Electronic tool or component
+DIGIT,Single numerical symbol
+DISKETTE,Small magnetic storage disk
+DISPLAY,Device for visual output
+DNS,System for translating domain names to IP addresses
+DOCKER,Platform for containerizing applications
+DOCUMENT,File containing written or printed information
+DONGLE,Small hardware device that enables functionality
+DRIVE,Device for storing and retrieving data
+DUPLEX,Ability to send and receive data simultaneously
+DYNAMIC,Capable of change or adaptation
+EDITOR,Software for modifying text or code
+EMBED,Insert content within another file or document
+EMULATOR,Software or hardware that imitates another system
+ENGINE,Core component of software that performs main tasks
+ENTRY,Data input into a system
+ERASE,Remove data permanently
+ESCAPE,Key used to exit a process or menu
+ETHERNET,Wired networking technology for local area networks
+EXPAND,Increase the size or scope of data
+EXPORT,Send data out of a system
+EXTENSION,Suffix indicating a file type
+FIBER,Optical material used for high-speed data transmission
+FIELD,Single piece of data in a database
+FILTER,Tool for selecting specific data
+FLAG,Indicator or marker in programming
+FLASH,Storage or animation technology
+FLOPPY,Outdated magnetic storage disk
+FOOTER,Text appearing at the bottom of a document
+FRAUD,Deception for personal gain online
+GADGET,Small electronic device
+GATEWAY,Device that connects different networks
+GIGABIT,Unit of digital information equal to one billion bits
+GRID,Network of computers working together
+HANDLE,Identifier for a resource in programming
+HASH,Function that converts data into a fixed-size string
+HEADER,Text appearing at the top of a document
+HEAP,Memory area for dynamic allocation
+HUB,Device that connects multiple network devices
+IMPORT,Bring data into a system
+INDEX,Table that speeds up data retrieval
+INFRARED,Wireless communication using light waves
+INJECT,Insert code or data  often maliciously
+INSTRUCTION,Command for a computer processor
+INTEGRATE,Combine systems or data
+INTRANET,Private network within an organization
+INVOKE,Call a function in programming
+ITERATE,Repeat a process or set of instructions
+JAVASCRIPT,Popular scripting language for web development
+JUMPER,Small connector on a circuit board
+KEY,Unique identifier or security code
+KEYFRAME,Frame marking the start or end of a transition
+KILOBYTE,Unit of data equal to 1024 bytes
+LABEL,Text used to identify data
+LASER,Device emitting focused light for reading data
+LATENCY,Delay in data transmission
+LAYER,Level in a system or model
+LICENSE,Official permission to use software
+LIST,Ordered set of data items
+LOAD,Transfer data into memory
+LOG,Record of events or transactions
+LOOP,Sequence of instructions repeated in programming
+MAC,Unique hardware address for network devices
+MAIL,Electronic message sent over a network
+MAP,Associate data items in programming
+MASK,Pattern used to filter data
+MENU,List of options in software
+MERGE,Combine data or files
+METADATA,Data describing other data
+MIGRATION,Process of moving data or systems
+MOUNT,Attach a storage device to a system
+MULTICAST,Send data to multiple recipients on a network
+NONCE,Random value used once for security
+NOTEBOOK,Portable computer similar to a laptop
+OPTIMIZE,Improve efficiency or performance
+ORACLE,Popular database management system
+OVERFLOW,Exceeding storage capacity in computing
+PARITY,Error checking method in data transmission
+PARTITION,Division of a storage device
+PERMISSION,Authorization to access resources
+PHOTON,Particle of light used in fiber optics
+PORTAL,Website serving as a gateway to information
+PRIVACY,Protection of personal data
+PROMPT,Symbol indicating readiness for input
+QUERY,Request for information from a database
+QUOTA,Maximum allowed resource usage
+RADIO,Wireless transmission using electromagnetic waves
+RECOVERY,Process of restoring lost data
+REDUNDANCY,Backup system to prevent failure
+REGISTER,Small storage location in a processor
+RELAY,Device that passes data between networks
+REMOTE,Accessing a system from a distance
+RENDER,Generate an image or video from data
+REPLICATE,Duplicate data or systems
+RETRIEVE,Get data from storage
+ROUTING,Process of selecting network paths
+SAN,Storage Area Network for high-speed data
+SCHEMA,Structure of a database
+SEGMENT,Part of data or memory
+SIGNATURE,Digital verification of authenticity
+SIM,Subscriber Identity Module in mobile devices
+SPOOL,Queue for print jobs or tasks
+SPYWARE,Software that secretly monitors user activity
+STATIC,Unchanging or fixed in programming
+SURF,Browse the internet
+TASK,Unit of work in computing
+THUMBNAIL,Small version of an image
+TOOLBAR,Row of icons for quick access to functions
+TRANSACTION,Unit of work in a database
+TUNNEL,Encrypted connection through a network
+VALIDATE,Check data for correctness
+WORD,CLUE
+APPLET,Small application running within a web page
+AUTOSAVE,Feature that periodically stores your work automatically
+BACKSPACE,Key used to delete characters to the left
+BIOS,Program that starts up a computer‰Ûªs hardware
+BOOKMARK,Saved shortcut to a web page
+CALCULATOR,Electronic device for mathematical operations
+CAMERA,Device for capturing images or video
+CHARGER,Device for replenishing battery power
+CLIPART,Collection of simple images for documents
+COMPONENT,Individual part of a computer system
+CONNECTOR,Physical interface for joining cables or devices
+CONTROLLER,Device or chip managing input/output operations
+DATAFLOW,Path data takes through a system
+DESIGN,Plan or drawing of a system or interface
+DIGITIZER,Device converting analog input to digital form
+DOCK,Station for connecting a laptop to peripherals
+EJECT,Remove a storage device safely
+EMOJI,Small digital image expressing emotion
+ENGAGED,Busy signal on a phone line
+FAN,Device for cooling computer components
+FORUM,Online discussion board
+GRAPH,Visual representation of data
+HEADLINE,Main title of a web article or news post
+HEADPHONES,Device for private listening to audio
+HEATSINK,Component that dissipates heat from hardware
+INSTALL,Set up software on a device
+INTERCOM,Electronic device for voice communication within a building
+KEYPAD,Panel of buttons for inputting numbers or commands
+LAG,Delay in response time
+LANDLINE,Traditional wired telephone connection
+LIFECYCLE,Stages of software or hardware development
+LOUDSPEAKER,Device that outputs sound
+MEMO,Short written message in a digital system
+MOBILE,Portable electronic device
+MOUSE,Handheld device for moving a pointer
+OPTICS,Branch of physics dealing with light
+PASTE,Insert copied data into a new location
+PHABLET,Mobile device combining phone and tablet features
+PHOTOGRAPH,Digital image captured by a camera
+PLUG,Connector for electrical or data devices
+POST,Submit data or messages online
+POWER,Electrical energy supplied to a device
+PROJECTOR,Device that displays images onto a surface
+RECYCLEBIN,Folder for deleted files before permanent removal
+REFRESH,Reload data or a web page
+RESISTOR,Component that limits electric current
+ROBOT,Machine capable of carrying out complex actions
+SATNAV,Device for satellite-based navigation
+SCROLL,Move displayed content up or down
+SHUTDOWN,Turn off a computer or device
+SMARTPHONE,Mobile phone with advanced computing features
+SPEAKER,Device that outputs sound from a computer
+SSD,Fast non-volatile storage device
+STREAMING,Real-time delivery of audio or video
+TABLET,Portable touchscreen computing device
+TECHIE,Person enthusiastic about technology
+TEXT,Written words in a digital document
+TOUCHPAD,Flat control surface for pointer movement
+TRACKPAD,Touch-sensitive surface for cursor control
+TRANSFER,Move data from one place to another
+TWEET,Short message posted on Twitter
+UNINSTALL,Remove software from a device
+USB,Universal connector for data and power
+USERNAME,Name used to identify a user in a system
+VIBRATION,Oscillation used for device alerts
+WALLPAPER,Background image on a computer screen
+WEBCAM,Camera for video communication over the internet
+WIFI,Wireless technology for connecting devices
+ZOOM,Video conferencing software or function
+ACCESSPOINT,Device allowing wireless devices to connect to a network
+ACTUATOR,Component converting electrical signals to physical movement
+AMPLIFIER,Device that increases the strength of electrical signals
+ANTENNA,Device for sending or receiving electromagnetic waves
+ASCII,Character encoding standard for text files
+BACKEND,Server-side part of a software application
+BITRATE,Number of bits transmitted per second
+BLACKLIST,List of entities denied access or privileges
+BOOTLOADER,Software that starts up an operating system
+BOTNET,Network of computers infected and controlled remotely
+CALIBRATION,Adjustment of equipment for accuracy
+CAPACITOR,Electronic component storing electrical energy
+CIRCUIT,Closed path for electrical current
+COAXIAL,Cable type for transmitting data or video
+COBOL,Early programming language used in business
+COMPRESSION,Reducing the size of data for storage or transmission
+CONDUCTOR,Material that allows the flow of electric current
+CONVECTION,Heat transfer through fluid movement
+COOLING,Process of removing heat from hardware
+COUPLING,Device connecting two mechanical parts
+CRYPTOGRAPHY,Science of encoding and decoding information
+DAC,Device converting digital signals to analog
+DECRYPT,Convert coded data back into readable form
+DEFRAGMENT,Reorganize data on a disk for efficiency
+DETECTOR,Device that senses a physical property
+DIAGNOSTICS,Tests to identify faults in systems
+DIODE,Electronic component allowing current in one direction
+DRONE,Unmanned aerial vehicle controlled remotely
+ELECTROMAGNET,Coil of wire acting as a magnet when electric current flows
+EMBEDDED,System integrated into hardware for specific functions
+EMULATION,Imitation of one system by another
+ENCRYPTOR,Device or software that encodes information
+FLUX,Rate of flow of energy or particles
+FOOTPRINT,Amount of space a device or system occupies
+GEARBOX,Mechanical device changing speed and torque
+GIGAHERTZ,Unit measuring frequency of processor cycles
+GIMBAL,Device allowing rotation along multiple axes
+HERTZ,Unit of frequency equal to one cycle per second
+HYDRAULICS,Technology using pressurized fluids for mechanical force
+IMPRESSION,Single view or display of online content
+INFLUENCER,Person with impact on social media trends
+INSULATION,Material preventing flow of electricity or heat
+INTEGRATOR,Company combining subsystems into a whole
+JITTER,Variation in signal timing
+KINEMATICS,Study of motion without regard to forces
+LATCH,Mechanical or electronic locking device
+LUBRICATION,Process of reducing friction between moving parts
+MACHINELEARNING,AI field where computers learn from data
+MAINBOARD,Primary circuit board in a computer
+MANUFACTURING,Process of producing goods using machines
+MATERIAL,Substance from which a device or component is made
+MECHATRONICS,Integration of mechanical and electronic systems
+MEGAHERTZ,Unit measuring millions of cycles per second
+MICROCONTROLLER,Small computer on a single integrated circuit
+MILLISECOND,One thousandth of a second
+MIRROR,Server that provides an exact copy of another
+MODULATION,Process of varying a signal for transmission
+MOTHERBOARD,Main printed circuit board in a computer
+NANOMETER,Unit of length equal to one billionth of a meter
+NANOTECHNOLOGY,Science of manipulating matter on an atomic scale
+OSCILLATOR,Device generating repetitive signals
+OVERCLOCK,Run hardware at higher speed than specified
+PARALLEL,Simultaneous processing or transmission
+PID,Controller adjusting output using proportional  integral  and derivative terms
+POLYMORPHIC,Changing form to evade detection  often malware
+PRESSURE,Force exerted per unit area
+QUALITY,Standard of something as measured against criteria
+RADAR,System detecting objects using radio waves
+RANSOMWARE,Malware demanding payment for data access
+REACTOR,Device for controlling a chemical or nuclear reaction
+RECEIVER,Device accepting signals or data
+RESONANCE,Oscillation at a particular frequency
+ROBOTICS,Design and use of robots
+SATELLITE,Artificial body orbiting the earth for communication
+SCALABILITY,Ability of a system to handle growth
+SERVO,Motor with precise control of position
+SHIELD,Protective device or software
+SOLENOID,Coil generating a magnetic field when current passes
+SPECTRUM,Range of electromagnetic frequencies
+STRAIN,Deformation caused by applied stress
+SUBSTRATE,Base material on which circuits are built
+SYNTHESIS,Combination of components to form a whole
+THERMAL,Related to heat or temperature
+THROUGHPUT,Amount of data processed in a given time
+TOPOLOGY,Arrangement of elements in a network
+TRANSDUCER,Device converting one form of energy to another
+TURBINE,Machine generating power from fluid movement
+VECTOR,Quantity with both magnitude and direction
+VOLTAGE,Electrical potential difference
+WAVELENGTH,Distance between two peaks of a wave
+WELDING,Process of joining materials by melting
+YAW,Rotation around a vertical axis
+APPEND,Add data to the end of a file or list
+BACKLIGHT,Illumination source behind a display screen
+BANDGAP,Energy difference in semiconductors
+CLOUDLET,Small-scale cloud data center near users
+DENOISE,Reduce unwanted sound or visual interference
+GEOFENCE,Virtual boundary for location-based services
+HAPTICS,Technology simulating touch sensations
+INKJET,Type of printer that sprays ink
+

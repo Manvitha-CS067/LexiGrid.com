@@ -15,6 +15,7 @@ def creator(request):
     # else:
         # Generate new crossword
     grid, across_clues, down_clues = generate_crossword()
+    
     # Store in session as JSON strings (since session data must be JSON-serializable)
     # request.session['grid'] = json.dumps(grid)
     # request.session['across_clues'] = json.dumps(across_clues)
@@ -136,7 +137,7 @@ import os
 
 GRID_SIZE = 20
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-csv_path = os.path.join(BASE_DIR, 'app1', 'physics3.csv')
+csv_path = os.path.join(BASE_DIR,  'Questions','tech1.csv')
 
 
 def generate_crossword():
@@ -291,5 +292,6 @@ def generate_crossword():
     
 
     return grid, across_clues, down_clues
+ 
 
 
