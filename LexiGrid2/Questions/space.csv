@@ -1,0 +1,500 @@
+ORBIT,The curved path of an object around a star or planet
+ASTEROID,A small rocky body orbiting the Sun
+COMET,An icy object with a glowing tail in space
+PLANET,A large body orbiting a star
+STAR,A massive luminous sphere of plasma held together by gravity
+GALAXY,"A massive system of stars, gas, and dust"
+METEOR,A space rock burning in Earths atmosphere
+METEORITE,A rock from space that lands on Earth
+SOLAR,Powered by sunlight
+LUNAR,Relating to the Moon
+CRATER,A bowl-shaped cavity on a planetary surface caused by impact
+SATELLITE,"An object orbiting a planet, natural or artificial"
+ASTRONAUT,A person trained to travel in space
+SPUTNIK,Name of the first artificial Earth satellite
+APOLLO,NASA program that landed humans on the Moon
+SPACESHIP,A vehicle for travels or transport between stars or planets
+ROVER,A robotic vehicle for exploring other planets
+TELESCOPE,An instrument for observing distant objects
+COSMOS,The universe seen as a well-ordered whole
+ASTRONOMY,The scientific study of celestial objects
+BLACKHOLE,A region of space with gravity so strong that nothing can escape
+SUPERNOVA,A star that suddenly increases greatly in brightness
+NEBULA,A cloud of gas and dust in space
+ASTEROIDS,Rock fragments in space between Mars and Jupiter
+ORION,A prominent constellation named after a hunter
+URANUS,The seventh planet from the Sun
+NEPTUNE,The eighth planet from the Sun
+VENUS,The second planet from the Sun
+MERCURY,The closest planet to the Sun
+SATURN,The sixth planet from the Sun with rings
+JUPITER,The largest planet in our Solar System
+MARS,The Red Planet
+EARTH,Our home planet
+MISSION,A planned space journey
+LAUNCH,The act of sending a spacecraft into space
+MODULE,A detachable section of a spacecraft
+GRAVITY,Force that attracts objects toward each other
+VACUUM,"A space with no matter, typical of outer space"
+ECLIPSE,When one celestial body blocks light from another
+PHOBOS,One of Mars two small moons
+DEIMOS,The smaller Mars moon
+IONOSPHERE,A layer of Earths atmosphere ionized by solar radiation
+SPACEWALK,When an astronaut walks outside a spacecraft
+THRUSTER,A small rocket engine used for spacecraft adjustments
+REENTRY,The return of a spacecraft into Earth's atmosphere
+LAUNCHPAD,The platform from which a rocket is launched
+PROPULSION,The action of driving or pushing a spacecraft forward
+MODULES,Parts of a spacecraft with specific functions
+TELEMETRY,Data transmitted from a spacecraft to ground control
+ANTENNA,A structure used to send or receive radio waves
+CORONA,The outer atmosphere of the sun
+QUASAR,"An extremely bright, distant object powered by a black hole"
+AXIS,An imaginary line around which something rotates
+ROTATE,To spin around an internal axis
+REVOLVE,To move in a circular orbit around another object
+EQUATOR,Imaginary line around the middle of a planet
+SOLSTICE,The point when the Sun reaches its highest or lowest point in the sky
+EQUINOX,When day and night are of equal length
+UMBRIA,Region of total shadow during an eclipse
+PENUMBRA,Partial shadow during an eclipse
+AURORA,A natural light display caused by solar particles in a planet's atmosphere
+POLARIS,"The North Star, located nearly above the North Pole"
+SPACEX,A private aerospace company founded by Elon Musk
+EXOPLANET,A planet located outside our Solar System
+COSMONAUT,A Russian astronaut
+GRAVITON,A hypothetical particle that mediates gravity
+LIGHTYEAR,The distance light travels in a year
+PARSEC,A unit of astronomical distance
+ZODIAC,Belt of the sky divided into twelve constellations
+LEO,A zodiac constellation shaped like a lion
+TAURUS,A constellation named after a bull
+SCORPIUS,A bright constellation shaped like a scorpion
+ANDROMEDA,The nearest spiral galaxy to the Milky Way
+MILKYWAY,The galaxy that contains our Solar System
+EVENTHORIZON,The boundary around a black hole
+QUANTUM,Smallest amount of physical quantity
+COSMOLOGY,Study of the origin and evolution of the universe
+INFRARED,A type of electromagnetic radiation
+ULTRAVIOLET,Radiation just beyond the violet spectrum
+SPECTRUM,The range of electromagnetic radiation
+MAGNETOSPHERE,Magnetic field region around a planet
+DEEPFIELD,A long-exposure image revealing distant galaxies
+PROBE,An unmanned spacecraft sent to explore space
+OBSERVER,One who studies celestial phenomena
+SUNSPOT,"A cooler, darker area on the surface of the sun"
+FLARE,A sudden burst of solar energy
+SOLARWIND,A stream of charged particles from the Sun
+HYDROGEN,The most abundant element in the universe
+HELIUM,The second most abundant element in the universe
+TITAN,The largest moon of Saturn
+EUROPA,One of Jupiters ice-covered moons
+GANYMEDE,The largest moon in the Solar System
+CALLISTO,A heavily cratered moon of Jupiter
+CERES,A dwarf planet in the asteroid belt
+ERIS,A distant dwarf planet beyond Pluto
+PLUTO,A dwarf planet once classified as the ninth planet
+CHIRON,A small body between asteroid and comet
+KUIPER,A belt beyond Neptune containing icy bodies
+OORT,A distant cloud of icy objects surrounding the solar system
+VOYAGER,A space probe launched in the 1970s
+PIONEER,One of the early space probes launched by NASA
+DISCOVERY,A NASA Space Shuttle orbiter
+ATLANTIS,A NASA Space Shuttle orbiter
+COLUMBIA,The first NASA Space Shuttle orbiter to reach space
+ENDEAVOUR,NASA Space Shuttle named after Captain Cooks ship
+HEATSHIELD,Protective barrier to prevent spacecraft from burning on reentry
+REACTOR,A device used to generate energy through nuclear reactions
+LAUNCHER,A system that sends spacecraft into space
+ORBITER,A spacecraft that goes into orbit around a planet
+SPACELAB,A research facility used in orbit
+SKYLAB,The first U.S. space station
+MIR,A Soviet-era space station
+ISS,Abbreviation for International Space Station
+ROSETTA,ESA probe that landed on a comet
+KEPLER,Space telescope used to find exoplanets
+HUBBLE,A large space telescope in low Earth orbit
+WEBB,The James Webb Space Telescope
+SPECTROMETER,A tool for measuring properties of light
+PAYLOAD,The cargo carried by a rocket or spacecraft
+BOOSTER,A rocket engine used to increase speed during launch
+STAGE,One section of a multistage rocket
+TRAJECTORY,The path followed by an object in flight
+SPIN,A rapid rotation of a body in space
+ATTITUDE,The orientation of a spacecraft in space
+GYROSCOPE,A device used to measure orientation
+INCLINATION,The tilt of an orbits plane
+PERIGEE,The point in orbit closest to Earth
+APOGEE,The point in orbit farthest from Earth
+BURN,A brief firing of a rocket engine
+MANEUVER,A controlled movement or change in position
+STELLAR,Relating to stars
+INTERSTELLAR,Occurring between stars
+INTERGALACTIC,Occurring between galaxies
+CONSTELLATION,A recognized pattern of stars in the sky
+LENS,Glass used in telescopes to focus light
+ALBEDO,"The reflectivity of a surface, like a moon or planet"
+EJECTION,The act of expelling material or an object from a system
+RELAY,A satellite that forwards communication
+CARRIER,A wave used to transmit data
+BEACON,A signal sent to track spacecraft location
+SIGNAL,A transmission sent or received across space
+ORIENTATION,Direction a spacecraft is facing
+SATURNIAN,Relating to the planet Saturn
+JOVIAN,Relating to the planet Jupiter
+LUNARCRAFT,A vehicle designed to land on the Moon
+SOLARSAIL,A spacecraft propelled by sunlight
+THERMOSPHERE,A high layer of Earths atmosphere
+MESOSPHERE,A colder middle layer of Earths atmosphere
+EXOSPHERE,The outermost layer of Earths atmosphere
+CRYOVOLCANO,A volcano that erupts ice or gas instead of lava
+IMPACTOR,A probe designed to crash into a target for data
+FUEL,A substance burned to produce propulsion
+DOCKING,The process of joining two space vehicles
+STATION,A permanent structure in space for habitation or research
+CAVITY,"A hollow region, often referring to a space structure or crater"
+EXPOSURE,Duration of light capture in space imaging
+SHUTTLE,A spacecraft that travels back and forth between Earth and space
+DOCK,To connect two spacecraft in orbit
+GIMBAL,A pivoted support allowing rotation in spacecraft instruments
+NADIR,"The point directly below a satellite, toward Earth"
+ZENITH,The point in the sky directly overhead
+ATMOSPHERE,The gas layer surrounding a planet
+EXPERIMENT,A test carried out in space for scientific purposes
+COMMAND,The main control function in spacecraft operations
+NAVIGATION,The process of determining and controlling spacecraft path
+SYSTEMS,The subsystems that make up spacecraft operations
+ANTARES,A bright star and also the name of a rocket
+ARIES,A constellation representing a ram
+LENSING,The bending of light caused by gravity
+TETHER,A cord used to connect astronauts or equipment in space
+SEISMIC,"Related to vibrations, sometimes measured on other planets"
+PAYLOADS,The cargo carried into space
+CRYO,"A prefix meaning cold, used in cryogenics"
+DESCENT,The act of moving from orbit toward a planet's surface
+ASCENT,The phase of rising into space
+RANGE,The distance between two space objects or systems
+SENSOR,A device that detects physical inputs
+PANELS,Flat components like solar panels
+MODULED,Equipped with separate units for specific functions
+BOREALIS,Related to northern lights or auroras
+SINGULARITY,"A point where gravity is infinitely strong, as in a black hole"
+XENON,A gas often used in ion propulsion systems
+FISSION,"Nuclear reaction where atoms split, releasing energy"
+FUSION,"The merging of nuclei, a future power source for space travel"
+ALLOY,A metal mixture used in spacecraft construction
+ESCAPE,To break free from a gravitational field
+PAYLOADBAY,The storage area in a spacecraft for cargo
+INERTIA,The resistance of an object to a change in motion
+DUST,Tiny particles floating in space or on the Moon
+DEBRIS,Fragments left from satellites or collisions
+CALIBRATION,Adjustment of instruments for accurate data
+SIGNALS,Transmissions sent through space
+INPUT,Data fed into a spacecraft system
+OUTPUT,Data generated from spacecraft systems
+BINARY,A star system with two stars orbiting each other
+COORDINATES,Position values used in tracking objects
+TRACKING,Monitoring the position of spacecraft
+RESPONSE,A systems reaction to input or commands
+BROADBAND,High-capacity transmission used in space comms
+RECEPTION,Receiving signals or data from spacecraft
+INSTRUMENT,A tool used to measure or observe in space
+SCAN,To examine an area or object systematically
+OBSERVATORY,A place or structure for astronomical study
+RELAYING,The process of transmitting signals between stations or satellites
+COUPLING,The act of connecting spacecraft or modules
+INTERFACE,A shared boundary between two systems or devices
+MIRROR,Reflective surface used in telescopes
+ALIGNMENT,Proper positioning of celestial or mechanical systems
+FREQUENCY,The number of signal cycles per second
+AMPLIFIER,A device that increases signal strength
+DETECTION,"The act of discovering a signal, object, or phenomenon"
+ANALYZER,A device used to examine data from space
+ARRAY,A collection of sensors or antennas arranged for detection
+PIXEL,The smallest unit of a digital image
+SPECTRA,Plural of spectrum; range of radiation or light
+ORIGIN,"The starting point of a signal, object, or mission"
+FIRMWARE,Built-in software in spacecraft hardware
+GRID,A framework or pattern used in imaging or calculations
+HORIZON,The apparent boundary between Earth and sky
+CALCULATION,The mathematical determination of a space value
+BASELINE,A fixed reference used for comparison or measurements
+VECTOR,A quantity with both magnitude and direction
+TUNER,A device used to select specific frequencies
+STREAM,Continuous transmission of signals or data
+ARCHIVE,A storage of mission or observational data
+EXCERPT,A selected portion of data or text
+CLUSTER,A group of stars or galaxies bound together
+NOISE,Random or unwanted signal interfering with data
+COOLING,The process of reducing temperature in instruments
+VALVE,A device for controlling the flow of fluids
+VENT,An opening that allows gas to escape
+CABIN,A pressurized area where astronauts live and work
+FLUID,"A substance that can flow, like fuel or coolant"
+PRESSURE,The force exerted per unit area
+HATCH,A door or opening in spacecraft
+LOCK,A sealed chamber for entering or exiting spacecraft
+PULSE,A brief burst of signal or energy
+MASS,The amount of matter in an object
+DRAG,Resistance caused by motion through a fluid or atmosphere
+RANGEFINDER,A tool used to measure distance
+FILTER,A device that blocks or transmits certain wavelengths
+GAIN,The increase in power or signal strength
+TILT,The angle between an objects axis and its orbital plane
+BEAM,A directed stream of energy or particles
+BLAZE,"A bright flare or mark, often on celestial paths"
+CYCLE,A repeating process like the solar cycle
+LOG,A record of events or data
+TIMER,A device used to measure time intervals
+SCALE,A ratio or level of measurement
+TRACKER,A device or software used to follow objects in motion
+SHELL,The exterior protective surface or layer
+EXOSUIT,A pressurized suit for spacewalks or alien environments
+VELOCITY,The speed of an object in a specific direction
+IMPULSE,A sudden force or burst of energy
+TANK,A container for storing fuel or gas in spacecraft
+DUCT,A channel for airflow or fluid flow
+GLIDER,"A vehicle that flies without engine thrust, sometimes tested in space"
+NOZZLE,The part of a rocket engine that expels gases
+PLUME,A visible stream of gas or vapor from a spacecraft
+HULL,The main body of a spacecraft
+CORE,The dense center of a galaxy or star
+CRUST,The outermost layer of a planet
+MANTLE,The layer between a planet's crust and core
+TRENCH,"A long, narrow depression on a planetary surface"
+RIDGE,"A long, raised surface on a planet or moon"
+BASIN,A large impact crater or low area on a planet
+DELTA,"A fan-shaped deposit at the end of a river, also seen on Mars"
+FAULT,A crack or fracture in a planetary surface
+DOME,A rounded structure often formed by lava or pressure
+ICECAP,A permanent layer of ice on a planet or moon
+POLYGON,Multi-sided patterns observed on Mars
+STREAK,"A line seen across a planetary surface, often from impact"
+SWIRL,A spiral or twisted feature seen on gas giants or clouds
+WAVE,A disturbance that travels through space or a medium
+OSCILLATION,A repetitive back-and-forth motion
+PLASMA,An ionized state of matter common in stars
+CHARGE,The electrical property of particles in space
+VOLTAGE,The electric potential difference between two points
+CURRENT,The flow of electric charge
+CIRCUIT,A path for electric current
+BOARD,A flat piece of electronics with components mounted on it
+CHIP,A tiny electronic circuit in spacecraft systems
+CRYSTAL,"A solid material with ordered atomic structure, often used in sensors"
+SENSORIUM,A collection of sensors on a probe or spacecraft
+READOUT,The visible display of collected data
+SIGNATURE,A unique pattern in data identifying a source or object
+METALLIC,Describing a material composed of metal
+CERAMIC,Heat-resistant material used in space shielding
+COATING,A protective surface layer
+SHIELD,A structure that protects from heat or debris
+BRACKET,A support structure in spacecraft
+BOLT,A fastener for mechanical joints in spacecraft
+RING,A thin disk of particles around a planet
+ARC,"A curved section, often used in orbital paths"
+LOBE,A bulge or rounded part of a celestial object
+FLAREUP,A sudden burst of solar or stellar activity
+TWILIGHT,The light before sunrise or after sunset
+DUSK,The time just after sunset
+DAWN,The time just before sunrise
+DARKNESS,"The absence of light, often found in deep space"
+MIDNIGHT,"Time of complete darkness, often used symbolically in space scenes"
+ABORT,A command to stop a space mission or launch for safety
+BREAKUP,The disintegration of a spacecraft or celestial body
+EMISSION,The release of light or particles from a body
+ABSORPTION,The process of taking in light or energy
+TRANSMIT,To send data or signals across space
+RECEIVER,A device that collects signals from space
+DECODER,A device that interprets coded signals
+PROTOCOL,Rules for space communication systems
+BANDWIDTH,The range of frequencies used for transmission
+DISH,A parabolic antenna for receiving signals
+NODE,A point where an orbit crosses a plane
+LINK,A connection between systems or devices
+BUFFER,Temporary data storage during transfer
+NETWORK,A system of connected communication or computer systems
+PORT,A connection point on a spacecraft
+TERMINAL,An end point of a circuit or system
+COMMANDER,Leader of a space mission
+PILOT,A person who controls a spacecraft
+ENGINEER,A technical expert on board or during mission control
+SCIENTIST,A person who conducts research and experiments
+BOTANIST,"A plant scientist, often for growing food in space"
+MEDIC,Health specialist for astronauts
+CREWMATE,A fellow astronaut on the same mission
+SUIT,Protective gear worn in space
+VISOR,A shield on a helmet to block sunlight
+GLOVE,A part of a space suit covering the hand
+TETHERED,Connected by a safety line during spacewalks
+FLOAT,To move without gravity or anchoring
+DECOMPRESSION,The sudden loss of pressure in spacecraft
+BAY,A compartment for equipment or payload
+HATCHWAY,An opening between modules or compartments
+JOINT,A movable connection between parts of a suit or system
+HARNESS,Safety gear for securing astronauts
+FOOTREST,A support in microgravity conditions
+MONITOR,A display showing system status or video
+DISPLAY,The visual output from a control panel
+INTERCOM,Internal communication system in spacecraft
+RATIONS,Pre-packed food for astronauts
+HYDRATION,The process of staying supplied with water
+CANTEEN,A container for holding drinking water
+STORAGE,Space designated for keeping tools or supplies
+UTILITY,Equipment or system supporting mission needs
+SUPPLY,Essential resources like food or tools sent to space
+LADDER,A climbing aid often seen on lunar modules
+CRANE,A lifting device used for construction or cargo handling
+DRILL,A tool used to bore into planetary surfaces
+SCOOP,A tool used to collect soil or samples
+SIEVE,A mesh used to separate fine particles in samples
+BULKHEAD,A wall separating compartments in spacecraft
+DAMPER,A device to reduce motion or vibration
+SEAL,A device or substance ensuring airtight closure
+PATCH,A temporary fix for hull breaches
+TILE,A heat-resistant material used on spacecraft undersides
+SHARD,"A small fragment, often from collisions or impacts"
+FIBER,A slender thread-like material used in composite structures
+COMPOSITE,A material made from two or more substances
+FRAME,The supporting structure of a spacecraft
+DOOR,"An entry or exit point, often airlocked in space"
+LATCH,A mechanical fastener for doors or hatches
+LEVER,A bar used to control mechanical functions
+BAYONET,A type of locking mechanism in spacecraft hardware
+GAUGE,An instrument for measuring pressure or force
+SWITCH,A device for opening or closing a circuit
+CIRCUITRY,The interconnected network of electric components
+WIRING,System of electrical connections within a spacecraft
+LITHIUM,A metal commonly used in space batteries
+BATTERY,A power source for spacecraft systems
+GENERATOR,A device that produces electrical energy
+STEERING,The act of controlling a spacecraft's direction
+BRAKE,A device used to slow down motion
+TRUSS,A support structure for modules and solar panels
+CELLS,Units that make up solar panels
+PANEL,"A flat unit, often used for capturing solar energy"
+ARRAYS,Groups of solar panels working together
+DEPLOY,To unfold or activate a component
+RETRACT,To pull back a deployed part
+LATCHING,The action of securing two modules together
+MOUNT,A structure that holds equipment in place
+RACK,A frame for holding instruments or supplies
+CARGO,The materials or equipment carried by spacecraft
+FREIGHT,Payload delivered during space missions
+ROBOTICS,The use of machines to perform tasks in space
+MANIPULATOR,A robotic arm or tool used for movement or repair
+TURRET,A rotating device for mounting instruments
+FIXTURE,A secure attachment point for tools or equipment
+ACTUATOR,A device that moves or controls a mechanism
+SOLENOID,An electromagnet used for triggering movement
+MOTOR,A machine that produces motion or power
+SERVO,A motor that allows precise position control
+ENCODER,A device that converts motion into signals
+TRANSCEIVER,A device that both transmits and receives signals
+REPEATER,A device that extends signal range
+EQUIPMENT,Tools or machinery used in missions
+CALIBRATOR,A device used to adjust instruments for accuracy
+GYRO,Short for gyroscope; measures orientation
+COMPASS,"A device that shows direction, adapted for space"
+ALTIMETER,An instrument that measures altitude
+THERMAL,Relating to heat management systems
+COOLER,A device that removes heat from systems
+HEATER,A device that adds heat to prevent freezing
+RADIATOR,A device that emits excess heat into space
+FOIL,"A thin metal sheet, often used for thermal protection"
+INSULATION,Material used to prevent heat transfer
+WRAP,Protective covering around cables or instruments
+LINER,An inner protective layer inside spacecraft walls
+VEST,Worn by astronauts for temperature control
+KEYPAD,A small keyboard for entering commands
+TOUCHPAD,A flat input surface for controlling interfaces
+TOOLKIT,A collection of instruments for repair or assembly
+CLAMP,A device used to grip or hold things in place
+WRENCH,A tool used for turning bolts or fasteners
+SCREWDRIVER,A tool used to insert or remove screws
+HAMMER,A tool used in mechanical assembly or emergencies
+CUTTER,A tool for slicing wires or other materials
+PANELING,The external coverings on spacecraft
+FASTENER,A mechanical device that joins components
+SPRING,A coiled metal object storing mechanical energy
+PIN,A slender fastener used in alignments or joints
+HINGE,A joint that allows rotation between parts
+CABLE,A bundle of wires for electricity or signals
+CORD,A flexible insulated wire or connector
+WIRELESS,Communication without physical connections
+BROADCAST,Sending signals over a wide area
+LINKAGE,A system of connected mechanical parts
+ADAPTER,A device that connects mismatched components
+PLUG,A connector for an electrical circuit
+SOCKET,A port or opening for receiving a plug
+PORTAL,An access point between modules or compartments
+THROTTLE,A control for adjusting power or speed
+DYNAMICS,"The study of forces in motion, relevant to spaceflight"
+MOMENTUM,The product of mass and velocity
+TORQUE,A force that causes rotation
+ROTATION,The spinning of an object around its axis
+REVOLUTION,A complete orbit around another body
+ELLIPSE,An oval-shaped path followed in many orbits
+INCLINE,"To tilt or slant, often describing orbits"
+LATITUDE,Angular distance north or south of the equator
+LONGITUDE,Angular distance east or west of a prime meridian
+AZIMUTH,The angle of a celestial object from true north
+DECLINATION,The angular distance of a celestial object above or below celestial equator
+ALTITUDE,The height of an object above sea level or horizon
+AU,"Abbreviation for astronomical unit, distance from Earth to Sun"
+NUCLEUS,The core of a comet or galaxy
+TAIL,The trail left by a comet
+BELT,A region with many asteroids or other bodies
+DWARF,A small planetary body like Pluto
+MOON,A natural satellite orbiting a planet
+PULSAR,A highly magnetized rotating neutron star
+SPIRAL,A type of galaxy with curved arms
+HALO,A spherical region surrounding a galaxy or star
+SPOT,A cooler area on the suns surface
+BURST,A rapid release of energy
+GLOW,A steady light emitted by objects like nebulae
+LIFTOFF,The moment a spacecraft leaves the ground
+STARDUST,Tiny particles from comets or space rocks
+MOONDUST,Fine powder covering the lunar surface
+EARTHRISE,The view of Earth rising over the Moon's horizon
+SPACESUIT,Protective suit worn during space missions
+ROVERBOT,A robotic rover used for planetary exploration
+ROCKETRY,The science of designing rockets
+STARSHIP,A large spacecraft for interstellar travel
+GRAVIMAP,A map showing variations in gravity
+MOONBASE,A permanent structure on the Moon
+MARSCOPE,A telescope designed to study Mars
+LUNOSCAN,A scan or image of the Moon
+COMETOID,An object similar to a comet
+ASTROJET,A jet designed for high-altitude or space flight
+COSMODOM,A spaceport or launch facility
+ORBITRON,A device for simulating orbital motion
+PLASMOID,A structure of plasma held by magnetic fields
+SPACENET,A network connecting spacecraft or stations
+ASTROGUN,A propulsion or defense tool in space fiction
+THERMOSAT,A satellite for thermal measurements
+COSMORAY,A beam or ray associated with space phenomena
+SKYWATCH,The act of observing celestial events
+SPACETIME,The four-dimensional framework of the universe
+NEBULITE,A mineral or fictional material found in nebulae
+QUASITAR,A theoretical hybrid of quasar and star
+ZENITHAL,Relating to the zenith point directly overhead
+AEROGEL,A lightweight material used in space insulation
+ASTROTEL,A telescope for observing distant galaxies
+EXOBOT,A robot used for exploration beyond Earth
+ROVERNET,A network of surface exploration vehicles
+MIRRORON,A reflective device used in telescopes
+SPACELID,A protective cover on spacecraft modules
+ASTRODAX,A digital logbook of space missions
+TELESAT,A communications satellite
+LUNARAY,A beam or energy associated with the Moon
+ORBICAM,A camera capturing orbital views
+STELLATE,Star-shaped or radiating from a center
+METEORON,A fictional or futuristic meteor sensor
+SUNTRACK,The apparent path the Sun follows in the sky
+AEROBRAKE,The use of atmosphere to slow down a spacecraft
+UMBRA,The darkest part of a shadow during an eclipse
+PERMAFROST,Permanently frozen ground found on Mars and icy moons
+JETTISON,To discard or eject material from a spacecraft
+APHELION,The point in orbit where a planet is farthest from the Sun
+ISOTOPE,A form of an element with the same protons but different neutrons
+BARYON,A type of subatomic particle including protons and neutrons
