@@ -137,7 +137,7 @@ import os
 
 GRID_SIZE = 20
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-csv_path = os.path.join(BASE_DIR,  'Questions','tech1.csv')
+csv_path = os.path.join(BASE_DIR,  'Questions','space.csv')
 
 
 def generate_crossword():
